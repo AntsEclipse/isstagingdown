@@ -1,9 +1,8 @@
 let timeout = 30000; // 30 second
 
 const getStatus = () => {
-  fetch('https://api-staging.compass-srp.com/auth',  {
-    method: 'OPTION'
-  }).then(response => {
+  fetch('https://api-staging.compass-srp.com/trades')
+  .then(response => {
     if (response.ok) {
       timeout = 120000; // 2 minute
       document.getElementById('status').textContent = 'No'
